@@ -37,6 +37,20 @@ public class NotificationEntity {
     @Column(name = "`to`", nullable = false)
     private String to;
 
+    @Size(max = 255)
+    @NotNull
+    @Column(name = "tittle", nullable = false)
+    private String tittle;
+
+    @Size(max = 255)
+    @NotNull
+    @Column(name = "message", nullable = false)
+    private String message;
+
+    @NotNull
+    @Column(name= "created_at", nullable = false)
+    private LocalDate createdAt;
+
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "notification_channel", nullable = false)

@@ -19,6 +19,9 @@ public class NotificationMapperImpl implements INotificationMapper {
         notification.setUuid(entity.getNotificationUuid());
         notification.setTo(entity.getTo());
         notification.setSendDate(entity.getSendDate());
+        notification.setCreatedAt(entity.getCreatedAt());
+        notification.setTittle(entity.getTittle());
+        notification.setMessage(entity.getMessage());
         notification.setNotificationChannel(NotificationChannel.valueOf(entity.getNotificationChannel().name()));
         notification.setNotificationType(NotificationType.valueOf(entity.getNotificationType().name()));
 
@@ -33,6 +36,9 @@ public class NotificationMapperImpl implements INotificationMapper {
         notificationEntity.setNotificationUuid(domain.getUuid());
         notificationEntity.setTo(domain.getTo());
         notificationEntity.setSendDate(domain.getSendDate());
+        notificationEntity.setCreatedAt(domain.getCreatedAt());
+        notificationEntity.setTittle(domain.getTittle());
+        notificationEntity.setMessage(domain.getMessage());
         notificationEntity.setNotificationChannel(NotificationChannelEntity.valueOf(domain.getNotificationChannel().name()));
         notificationEntity.setNotificationType(NotificationTypeEntity.valueOf(domain.getNotificationType().name()));
 

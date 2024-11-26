@@ -1,7 +1,9 @@
 package com.qride.notifications.infraestructure.entities.enums;
 
 public enum NotificationTypeEntity {
-    PROMO,
+    REGISTRATION,
     UPDATE,
-    CONFIRMATION
+    CONFIRMATION,
+    TRIP,
+    ROUTE,
 }

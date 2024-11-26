@@ -12,7 +12,7 @@ public class NotificationEventListener {
     @Autowired
     private INotificationService service;
 
-    @RabbitListener(queues = "Notification")
+    @RabbitListener(queues = "NotificationEvent")
     public void handleNotificationEvent(NotificationEvent event) {
         switch (event.getType()) {
             case EMAIL -> service.sendEmail(event.getDestination(), event.getSubject(), event.getMessage());

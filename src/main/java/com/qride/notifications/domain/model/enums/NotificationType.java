@@ -1,7 +1,9 @@
 package com.qride.notifications.domain.model.enums;
 
 public enum NotificationType {
-    PROMO,
+    REGISTRATION,
     UPDATE,
     CONFIRMATION,
+    TRIP,
+    ROUTE,
 }

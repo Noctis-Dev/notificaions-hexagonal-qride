@@ -23,6 +23,15 @@ public class Notification {
     private String to;
 
     @NotNull
+    private String tittle;
+
+    @NotNull
+    private String message;
+
+    @NotNull
+    private LocalDate createdAt;
+
+    @NotNull
     private NotificationChannel notificationChannel;
 
     @NotNull
