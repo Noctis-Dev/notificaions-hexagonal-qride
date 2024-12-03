@@ -48,10 +48,6 @@ public class NotificationEntity {
     private String message;
 
     @NotNull
-    @Column(name= "created_at", nullable = false)
-    private LocalDate createdAt;
-
-    @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "notification_channel", nullable = false)
     private NotificationChannelEntity notificationChannel;

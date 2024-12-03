@@ -1,7 +1,7 @@
 package com.qride.notifications.infraestructure.external;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qride.notifications.domain.external.INotifyWhatsapp;
+import com.qride.notifications.domain.external.IMetaNotify;
 import com.qride.notifications.infraestructure.configurations.MetaConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class MetaNotifyImpl implements INotifyWhatsapp {
+public class MetaNotifyImpl implements IMetaNotify {
 
     @Autowired
     private MetaConfig metaConfig;
@@ -29,6 +29,7 @@ public class MetaNotifyImpl implements INotifyWhatsapp {
         Map<String, Object> payload = new HashMap<>();
         payload.put("messaging_product", "whatsapp");
         payload.put("to", to);
+        payload.put("type", "template");
         Map<String, Object> template = new HashMap<>();
         template.put("name", "soa_test");
         Map<String, String> language = new HashMap<>();

@@ -36,6 +36,8 @@ public class NotificationServiceImpl implements INotificationService {
         notification.setSendDate(LocalDate.now());
         notification.setNotificationType(NotificationType.CONFIRMATION);
         notification.setNotificationChannel(NotificationChannel.WHATSAPP);
+        notification.setTittle("Qride new Confirmation");
+        notification.setMessage(message);
 
         repository.save(notification);
     }
@@ -50,6 +52,8 @@ public class NotificationServiceImpl implements INotificationService {
         notification.setSendDate(LocalDate.now());
         notification.setNotificationType(NotificationType.CONFIRMATION);
         notification.setNotificationChannel(NotificationChannel.EMAIL);
+        notification.setTittle(subject);
+        notification.setMessage(body);
 
         repository.save(notification);
     }

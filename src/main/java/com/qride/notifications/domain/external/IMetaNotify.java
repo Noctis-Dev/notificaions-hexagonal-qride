@@ -1,6 +1,6 @@
 package com.qride.notifications.domain.external;
 
-public interface INotifyWhatsapp {
+public interface IMetaNotify {
 
     void sendMessage(String message, String phoneNumber);
 

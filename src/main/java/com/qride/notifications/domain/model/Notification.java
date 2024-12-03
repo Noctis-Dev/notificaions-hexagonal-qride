@@ -29,9 +29,6 @@ public class Notification {
     private String message;
 
     @NotNull
-    private LocalDate createdAt;
-
-    @NotNull
     private NotificationChannel notificationChannel;
 
     @NotNull
