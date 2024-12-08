@@ -141,6 +141,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>qride-notifications</finalName>
     </build>
 
 </project>
